@@ -66,20 +66,20 @@ richsimp.exampleJudgement2 = {
 
 richsimp.productIntro = (inputJudgement1, inputJudgement2) => {
 
-    if (!inputJudgement1.kind == "judgement" ) {
+    if (inputJudgement1.kind !== "judgement" ) {
         throw new Error("First input must be a judgement");
     }
     
-    if (!inputJudgement2.kind == "judgement" ) {
+    if (inputJudgement2.kind !== "judgement" ) {
         throw new Error("Second input must be a judgement");
     }
 
     
-    if (!inputJudgement1.declaration.kind == "type declaration" ) {
+    if (inputJudgement1.declaration.kind !== "type declaration" ) {
         throw new Error("First judgement must be a type declaration");
     }
 
-    if (!inputJudgement2.declaration.kind == "type declaration" ) {
+    if (inputJudgement2.declaration.kind !== "type declaration" ) {
         throw new Error("Second judgement must be a type declaration");
     }
 
